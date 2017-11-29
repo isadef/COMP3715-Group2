@@ -15,6 +15,11 @@ function writeRegisteredCoursesData(response, data)
 	writeMyFile("studentData.json", data, response);
 }
 
+function writeMainData(response, data)
+{
+	console.log(data);
+	writeMyFile("mainData.json", data, response);
+}
 
 function writeMyFile(name, data, response)
 {
@@ -90,6 +95,11 @@ function courseDataJSON(response)
 function studentDataJSON(response)
 {
 	readFileFunction(response, "studentData.json", "application/json");
+}
+
+function mainDataJSON(response)
+{
+	readFileFunction(response, "mainData.json", "application/json");
 }
 
 function imagesGVU(response)
@@ -183,5 +193,7 @@ exports.imagesCampus2Large = imagesCampus2Large;
 exports.imagesCampus3Large = imagesCampus3Large;
 exports.courseDataJSON = courseDataJSON;
 exports.studentDataJSON = studentDataJSON;
+exports.mainDataJSON = mainDataJSON;
 exports.writeCourseData = writeCourseData;
+exports.writeMainData = writeMainData;
 exports.writeRegisteredCoursesData = writeRegisteredCoursesData;
